@@ -1,0 +1,224 @@
+/*I used flex almost every part. 
+According to requirements I adjusted items by using the flex features.*/
+* {
+    margin: 0;
+}
+/*I got this part of code in the stackoverlow. This makes the hr tag more bold.*/
+hr {
+    border: 1.25vh solid aqua;
+    border-radius: 5%;
+    margin: 0.25vh 0;
+}
+/*I used flex in every container part to adjust elements.*/
+/*I used vh to adjust the size of elements.*/
+header {
+    background-color: seashell;
+    display: flex;
+    height: 12vh;
+    border: 0.5vh solid black;
+}
+
+.left-header-element {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+/*I setted max-width to 15. Height will be adjusted automaticallly according to max-width.*/
+.left-header-element img {
+    max-width: 15%;
+    height: auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.left-header-element div {
+    display: flex;
+    font-size: 1.7vh;
+    align-items: center;
+    margin: 2%;
+}
+
+.right-header-element {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-header-element div {
+    font-size: 3vh;
+}
+/*I divided section to 3 part respectively right, mid and left.
+According to requirements I setted widths in each part.*/
+section {
+    display: flex;
+    border: 0.5vh solid black;
+    border-bottom: none;
+    border-top: none;
+    height: 70.7vh;
+}
+/*I used space evenly in justify content feature. It gives to adjusting the inside elements equally.
+Flex direction is setted column. Because items should be adjusted top to bottom.*/
+.left-section {
+    background-color: antiquewhite;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+/*When I used border all of the elements of body the borders is not setted equally and it was much bold.
+Because of that I adjusted borders one by one in each element.*/
+.mid-section {
+    flex: 5;
+    border-left: 0.5vh solid black;
+    border-right: 0.5vh solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-section {
+    background-color: antiquewhite;
+    flex: 1.35;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.left-section-element {
+    border: 0.5vh solid black;
+    border-radius: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*I setted max-width to 6vh. Height is automaticallly adjusted according to max-width.*/
+.left-section-element img {
+    max-width: 6vh;
+    height: auto;
+    margin-right: 3%;
+}
+/*Span elements initial font size is small comparing to the image. Because of that I setted 2vh to make larger.*/
+.left-section-element span {
+    font-size: 2vh;
+}
+/*Because of the reason as I mentioned  line 66 and 67 I setted border-top to none.*/
+.mid-section-top-element {
+    flex: 1;
+    text-align: center;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vh;
+}
+/*I used overlow to this element. Because the container might contain more elements. It must scrollable.*/
+.mid-section-container {
+    background-color: lightgoldenrodyellow;
+    flex: 6;
+    border-top: 0.5vh solid black;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.mid-section-element {
+    margin: 2.5% 10%;
+}
+/*Right section elements must have some common css values. I adjusted the common css rules to element. 
+When I come to apply different rules to right-section-elements I used id for each element.
+Generally right sections elements have same rules. Thus I wrote almost same code for elements.*/
+.right-section-element {
+    border: 0.3vh dashed darkblue;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: auto;
+    height: 25%;
+    border-radius: 10%; 
+}
+
+#right-section-top-element {
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+}
+
+#right-section-top-element img {
+    margin: 2%;
+    max-width: 6vh;
+    border-radius: 100%;
+}
+
+#right-section-top-element div {
+    margin: 2%;
+    padding: 2%;
+    border: 0.25vh solid black;
+    text-align: center;
+}
+
+#right-section-mid-element {
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#right-section-mid-element img {
+    margin: 2%;
+    max-width: 9vh;
+}
+
+#right-section-mid-element div {
+    margin: 2%;
+    padding: 2%;
+    text-align: center;
+}
+
+#right-section-mid-element div p {
+    border: 0.25vh solid black;
+    padding: 0.2vh;
+    font-size: 1.5vh;
+}
+/*I used overlow to this element. Because previous transictions may contain more elements than mine. It must scrollable.*/
+#right-section-bottom-element {
+    padding: 10%;
+    background-color: honeydew;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: auto;
+}
+
+.right-section-item {
+    margin: 1.5% 2%;
+    padding: 1.5%;
+    border: 0.2vh solid black;
+    color: darkred;
+    font-size: 1.5vh;
+}
+/*Footer contains 3 piece item. I setted those elements with flex.
+In footer items I also used flex to adjust items which is staying in the footer-item.*/
+footer {
+    border-top: 0.5vh solid black;
+    background-color: rgba(211, 211, 211, 0.945);
+    height: 11vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-item {
+    flex: 1;
+    margin: 0.5% 2%;
+    border: 0.25vh dashed black;
+    border-radius: 8%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2vh;
+}
+
+p {
+    text-align: center;
+}
